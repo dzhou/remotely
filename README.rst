@@ -24,5 +24,10 @@ And you use the remotely decorater for any function you want to run remotely.
     # function will be executed on the remote server
     remote_code()
 
+What you can use remotely for:
 
+- to run code under another version of python
+- to access libraries not available on the current box 
+  (for example use win32com from linux)
+- to access resources (files etc) on another box 
 
