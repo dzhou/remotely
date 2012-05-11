@@ -25,9 +25,9 @@ setup(
     license = "http://www.opensource.org/licenses/bsd-3-clause",
     description = "Remotely is a simple and secure remote code execution api",
     classifiers = [
-        'Development Status :: 3 - Alpha'
-        'Environment :: Console'
-        'Intended Audience :: Developers'
+        'Development Status :: 3 - Alpha',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',

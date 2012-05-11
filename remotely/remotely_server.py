@@ -20,6 +20,14 @@ class RemotelyException(Exception): pass
 
 DEBUG_MODE = False
 
+def create_remotely_server(api_key, port=8075):
+    server = RemotelyServer(('', port))
+    server.register_multicall_functions()
+    server.register_function(server.run, "run")
+    server.register_key(api_key)
+    return server
+
+
 class RemotelyServer(AsyncXMLRPCServer):
     def __init__(self, *args, **kwds):
         SimpleXMLRPCServer.__init__(self, *args, **kwds)
@@ -63,12 +71,14 @@ def main():
     #print "API_KEY", args.api_key
     
     # start server
+    #def start_server():
+    #    server = RemotelyServer(('', args.port))
+    #    server.register_multicall_functions()
+    #    server.register_function(server.run, "run")
+    #    server.register_key(args.api_key)
+
     def start_server():
-        #server = RemotelyServer(('', args.port), AuthRequestHandler)
-        server = RemotelyServer(('', args.port))
-        server.register_multicall_functions()
-        server.register_function(server.run, "run")
-        server.register_key(args.api_key)
+        server = create_remotely_server(args.api_key, args.port)
         print "starting remote exec server on port %s .." % args.port
         server.serve_forever()
 

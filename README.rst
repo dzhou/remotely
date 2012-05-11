@@ -5,8 +5,9 @@ You start the remotely server on the box where you want to execute code.
 
 ::
 
-    $ python remotely_server.py --api_key=YOUR_API_KEY --port=7070
-    starting remote exec server on port 7070 ..
+    from remotely import create_remotely_server
+    server = create_remotely_server("YOUR_API_KEY", PORT)
+    server.serve_forever()
     ...
 
 And you use the remotely decorater for any function you want to run remotely.
@@ -15,7 +16,7 @@ And you use the remotely decorater for any function you want to run remotely.
 
     from remotely import remotely
 
-    @remotely(YOUR_API_KEY, SERVER, PORT)
+    @remotely("YOUR_API_KEY", SERVER, PORT)
     def remote_code():
         # do something here
         return result
