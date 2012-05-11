@@ -10,7 +10,7 @@ remotely
 """
 
 __title__ = 'remotely'
-__version__ = '0.1'
+__version__ = '0.1.2'
 __author__ = 'Kefei Dan Zhou'
 __copyright__ = 'Copyright 2012 Kefei Dan Zhou'
 

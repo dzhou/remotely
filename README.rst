@@ -21,7 +21,7 @@ And you use the remotely decorater for any function you want to run remotely.
         # do something here
         return result
 
-    # function will be executed on remote server
+    # function will be executed on the remote server
     remote_code()
 
 
