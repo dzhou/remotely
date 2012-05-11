@@ -1,0 +1,11 @@
+.coverage
+MANIFEST
+coverage.xml
+nosetests.xml
+pylint.txt
+cover/
+docs/_build
+requests.egg-info/
+*.pyc
+*.swp
+
