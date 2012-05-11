@@ -1,6 +1,6 @@
 Remotely
 ========
-Remotely is a simple and secure remote code execution api. 
+Remotely is a simple and secure remote code execution api.
 You start the remotely server on the box where you want to execute code.
 
 ::

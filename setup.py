@@ -12,7 +12,7 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     sys.exit()
 
-version = "0.1.3"
+version = "0.1.4"
 
 setup(
     name = "remotely",
