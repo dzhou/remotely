@@ -18,6 +18,7 @@ And you use the remotely decorater for any function you want to run remotely.
 
     @remotely("YOUR_API_KEY", SERVER, PORT)
     def remote_code():
+        # import required packages
         # do something here
         return result
 

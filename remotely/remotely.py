@@ -9,7 +9,7 @@ import pickle
 
 def remotely(api_key, host, port):
     """
-    decorator for executing code remotely
+    decorator for executing code remotely. 
     @param api_key: key for authentication
     @param host: remotely server ip
     @param port: remotely server port

@@ -24,6 +24,10 @@ class RemotelyException(Exception): pass
 DEBUG_MODE = False
 
 def create_remotely_server(api_key, port=8075):
+    """
+    create a server to be used with the given api key.
+    call serve_forever() on the server obj to start.
+    """ 
     server = RemotelyServer(('', port))
     server.register_multicall_functions()
     server.register_function(server.run, "run")
@@ -45,7 +49,7 @@ class RemotelyServer(AsyncXMLRPCServer):
 
     def run(self, api_key, func_str, *args, **kwds):
         if api_key != self.api_key and self.api_key is not None:
-            raise RemotelyException(" Bad API KEY: " + api_key)
+            raise RemotelyException(" Bad API KEY: " + str(api_key))
 
         code = marshal.loads(base64.b64decode(func_str))
         func = types.FunctionType(code, globals(), "remote_func")
