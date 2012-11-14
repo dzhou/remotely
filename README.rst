@@ -4,6 +4,7 @@ Remotely is a simple and secure remote code execution api that supports both
 asynchronous and blocking execution. 
 
 Remotely can be used for:
+
 - distributing tasks to other boxes in parallel
 - running coding under other versions of python
 - accessing libraries not available on the current box
@@ -39,6 +40,7 @@ The asynchronous (non-blocking) version runs the function as a separate process
 on the remote server and supports simple job management functions (join and kill).
 
 ::
+
     from remotely import RemoteClient
     rc = RemoteClient("API_KEY", SERVER, PORT)
     pid = rc.run(foo, arg1, arg2=key2)
