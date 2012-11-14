@@ -10,11 +10,12 @@ remotely
 """
 
 __title__ = 'remotely'
-__version__ = '0.1.5'
+__version__ = '0.2.0'
 __author__ = 'Kefei Dan Zhou'
 __copyright__ = 'Copyright 2012 Kefei Dan Zhou'
 
 
 from .remotely import remotely
+from .remotely import RemoteClient
 from .remotely_server import create_remotely_server
 from .remotely_server import RemotelyException

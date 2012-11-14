@@ -60,8 +60,8 @@ class RemotelyServerTest(unittest.TestCase):
         self.assertRaises(RemotelyException, self.server.run, "BAD-KEY", func, 2, 3)
 
         # send req with good key
-        self.assertEqual(decode_output(self.server.run(self.api_key, func, 0, 3)), 0)
-        self.assertEqual(decode_output(self.server.run(self.api_key, func, 2, 3)), 6)
+        self.assertEqual(decode_output(self.server.run(self.api_key, False, func, 0, 3)), 0)
+        self.assertEqual(decode_output(self.server.run(self.api_key, False, func, 2, 3)), 6)
 
 
     def test_decorator(self):   
