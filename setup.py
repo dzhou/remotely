@@ -5,6 +5,7 @@ distutils/setuptools install script. See inline comments for packaging documenta
 """
 
 from distutils.core import setup
+from remotely import __version__ as version
 import os
 import sys
 
@@ -12,7 +13,9 @@ if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
     sys.exit()
 
-version = "0.2.0"
+#version = "0.2.0"
+
+print version
 
 setup(
     name = "remotely",

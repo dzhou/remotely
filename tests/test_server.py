@@ -30,7 +30,7 @@ cell_changer_code = new.code(
 def change_cell_value(cell, newval):
     return new.function(cell_changer_code, {}, None, (), (cell,))(newval)
 
-def test_mul(a, b):
+def mul(a, b):
     return a*b
 
 def code_str(func):
@@ -53,7 +53,7 @@ class RemotelyServerTest(unittest.TestCase):
 
     def test_server(self):
         self.assertEqual(self.server.api_key, self.api_key)
-        func = code_str(test_mul)
+        func = code_str(mul)
 
         # send req with bad key
         self.assertRaises(RemotelyException, self.server.run, None, func, 2, 3)
@@ -66,7 +66,7 @@ class RemotelyServerTest(unittest.TestCase):
 
     def test_decorator(self):   
         dec = remotely(self.api_key, 'localhost', 9856)
-        remote_func = dec(test_mul)
+        remote_func = dec(mul)
         # override proxy with local server in closure
         change_cell_value(remote_func.func_closure[0], self.server)
                 

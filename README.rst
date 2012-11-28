@@ -47,3 +47,7 @@ on the remote server and supports simple job management functions (join and kill
     output = rc.join(pid)
     output = rc.kill(pid)
 
+| 
+| Created by Kefei Zhou (kefei.zhou at gmail)  
+| Licensed under BSD 3-Clause, included as LICENSE in the source distribution.
+| 

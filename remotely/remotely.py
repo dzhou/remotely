@@ -68,7 +68,7 @@ class RemoteClient(object):
         Terminate the process using Process.terminate() call
         @param pid: process id from run()
         """
-        output = self.proxy.kill(self.api_key, pid, timeout=None)
+        output = self.proxy.kill(self.api_key, pid, None)
         return pickle.loads(base64.b64decode(output))
 
 
