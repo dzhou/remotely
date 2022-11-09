@@ -15,7 +15,7 @@ if sys.argv[-1] == 'publish':
 
 #version = "0.2.0"
 
-print version
+print (version)
 
 setup(
     name = "remotely",
